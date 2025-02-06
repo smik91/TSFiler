@@ -1,0 +1,23 @@
+.contacts-page {
+    padding: 40px;
+    text-align: center;
+  
+    h1 {
+      color: #00bcd4;
+      margin-bottom: 20px;
+    }
+  
+    p, ul {
+      font-size: 18px;
+      color: #333;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin: 10px 0;
+      }
+    }
+  }

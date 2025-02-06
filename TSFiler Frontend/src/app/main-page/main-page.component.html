@@ -1,0 +1,34 @@
+<div class="main-container">
+  <h1 class="intro-title">Welcome to TS-Filer!</h1>
+  <p class="intro-text">Upload your file, choose the format and processing method, and get the result in one click.</p>
+
+  <form (ngSubmit)="onSubmit()" #fileForm="ngForm">
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Output File Name</mat-label>
+        <input matInput [(ngModel)]="outputFileName" name="outputFileName" required />
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Processing Type</mat-label>
+        <mat-select [(ngModel)]="selectedProcessor" name="processor" required>
+          <mat-option value="1">Normal</mat-option>
+          <mat-option value="2">Regular Expressions</mat-option>
+          <mat-option value="3">NCalc Library</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group file-upload">
+      <input type="file" id="fileInput" (change)="onFileChange($event)" required />
+      <label for="fileInput">
+        <mat-icon>attach_file</mat-icon>
+        <span>{{ fileName || 'Select file to upload' }}</span>
+      </label>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!file || !selectedProcessor || !outputFileName">Submit</button>
+  </form>
+</div>

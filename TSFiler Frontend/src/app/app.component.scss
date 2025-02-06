@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #2e2e2e;
+}
+
+main-page {
+    flex: 1; /* Заполняет всё пространство между header и footer */
+    padding: 10px;
+}
+
+footer {
+    padding: 10px;
+}

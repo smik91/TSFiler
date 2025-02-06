@@ -1,0 +1,66 @@
+.header {
+    background: linear-gradient(135deg, #0d0d0d, #1c1c1c);
+    padding: 20px 40px;
+    border-bottom: 1px solid #333;
+  
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .header-title {
+        display: inline-block;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 1.2; /* Добавлено */
+        padding: 10px 0;  /* Добавлено */
+        background: linear-gradient(45deg, #00bcd4, #009688);
+        background-size: 200% 200%; /* Добавлено для эффекта при наведении */
+        background-position: left center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: background-position 0.5s ease;
+        cursor: pointer;
+  
+        &:hover {
+          background-position: right center;
+        }
+      }
+  
+      .nav-links {
+        list-style: none;
+        display: flex;
+  
+        li {
+          margin-left: 30px;
+  
+          a {
+            text-decoration: none;
+            color: #b2dfdb;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s;
+  
+            &:after {
+              content: '';
+              position: absolute;
+              width: 0%;
+              height: 2px;
+              background: #00bcd4;
+              bottom: -5px;
+              left: 0;
+              transition: width 0.3s;
+            }
+  
+            &:hover {
+              color: #e0f2f1;
+  
+              &:after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
